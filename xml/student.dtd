@@ -1,0 +1,29 @@
+<!ELEMENT student (name, contact-info, enrollment-info)>
+
+<!ELEMENT name (first-name, middle-name, last-name, preferred-name)>
+
+<!ELEMENT first-name (#PCDATA)>
+<!ELEMENT middle-name (#PCDATA)>
+<!ELEMENT last-name (#PCDATA)>
+<!ELEMENT preferred-name (#PCDATA)>
+
+<!ELEMENT contact-info EMPTY>
+
+<!ELEMENT enrollment-info (gpa, major+, minor*, advisor, date-enrolled, graduation-date)>
+
+<!ELEMENT gpa (#PCDATA)>
+<!ELEMENT major (#PCDATA)>
+<!ELEMENT minor (#PCDATA)>
+<!ELEMENT advisor (#PCDATA)>
+<!ELEMENT date-enrolled (#PCDATA)>
+<!ELEMENT graduation-date (#PCDATA)>
+
+<!ATTLIST student id ID #REQUIRED>
+
+<!ATTLIST contact-info
+          email CDATA #REQUIRED
+          phone CDATA #REQUIRED>
+
+<!ATTLIST enrollment-info
+          year-status (first-year|second-year|third-year|fourth-year) #REQUIRED
+          graduation-status (full-time|part-time|graduated|withdrawn) #REQUIRED>

@@ -1,3 +1,4 @@
+<!ELEMENT student-database (student+)>
 <!ELEMENT student (name, contact-info, enrollment-info)>
 
 <!ELEMENT name (first-name, middle-name, last-name, preferred-name)>

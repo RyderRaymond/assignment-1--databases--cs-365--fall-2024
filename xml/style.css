@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+
+
+:root {
+  margin: 0 auto;
+  width: 1000px;
+  font: 200 16px 'SUSE';
+}
+
+:root::before {
+  content: 'Student Database';
+  text-align: center;
+  font-size: 3.0rem;
+  color: cornflowerblue;
+}
+
+student-databse {
+  display:block;
+}
+
+
+student::before {
+  content: 'ID: ' attr(id) '\a';
+  color: darkblue;
+  font-weight: 300;
+}
+
+student {
+  font-size: 1.5rem;
+  margin: 0 0 24px;
+  display:block;
+}
+
+name::before {
+  content: 'Name: ';
+}
+
+name {
+  display: block;
+  margin-left: 40px;
+}
+
+
+
+contact-info::before {
+  margin-left: -40px;
+  content: 'Contact Information: \a';
+  white-space: pre;
+}
+
+contact-info {
+  margin-left: 80px;
+  display:block;
+}
+
+contact-info::after {
+  content: 'Email: ' attr(email) '\aPhone Number: ' attr(phone);
+  white-space: pre;
+}
+
+enrollment-info::before{
+  margin-left: -40px;
+  content: 'Enrollment Status: ' attr(year-status) ', ' attr(graduation-status) '\a';
+  white-space: pre;
+}
+
+enrollment-info {
+  margin-left: 80px;
+  display: block;
+}
+
+enrollment-info * {
+  display: block;
+}
+
+gpa::before {
+  content: 'GPA: ';
+}
+
+major::before {
+  content: 'Major: ';
+}
+
+minor::before {
+  content: 'Minor: ';
+}
+
+advisor::before {
+  content: 'Advisor: ';
+}
+
+date-enrolled::before {
+  content: 'Date Enrolled: ';
+}
+
+graduation-date::before {
+  content: 'Graduation Date: ';
+}

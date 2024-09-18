@@ -1,17 +1,45 @@
+<!-- ========================================================================
+student-database is the root element.
+
+XML can only have one root element, so there needs to be something to hold
+all of the students. This has to contain one or more student.
+==========================================================================-->
 <!ELEMENT student-database (student+)>
+
+<!-- ========================================================================
+Represents a student, and all of their information.
+
+Contains elements for the name information, contact-info, and enrollment-info
+==========================================================================-->
 <!ELEMENT student (name, contact-info, enrollment-info)>
 
-<!ELEMENT name (first-name, middle-name, last-name, preferred-name)>
+<!-- ========================================================================
+Holds the information pertaining to the student's name.
 
+Students must have a first name, middle name, last name, and preferred name.
+
+Rather than stating that students can have zero or one middle names
+and preferred names, it is required to have these elements, but they can
+be left blank if the student does not have that information.
+==========================================================================-->
+<!ELEMENT name (first-name, middle-name, last-name, preferred-name)>
 <!ELEMENT first-name (#PCDATA)>
 <!ELEMENT middle-name (#PCDATA)>
 <!ELEMENT last-name (#PCDATA)>
 <!ELEMENT preferred-name (#PCDATA)>
 
+<!-- ========================================================================
+Contact info will contain the student's email and phone number as required
+attributes.
+==========================================================================-->
 <!ELEMENT contact-info EMPTY>
 
+<!-- ========================================================================
+Enrollment info contains the student's GPA, at least one major and zero or
+more minors, an advisor, the date they enrolled, and the date they graduated
+on or will graduate on.
+==========================================================================-->
 <!ELEMENT enrollment-info (gpa, major+, minor*, advisor, date-enrolled, graduation-date)>
-
 <!ELEMENT gpa (#PCDATA)>
 <!ELEMENT major (#PCDATA)>
 <!ELEMENT minor (#PCDATA)>
@@ -19,12 +47,34 @@
 <!ELEMENT date-enrolled (#PCDATA)>
 <!ELEMENT graduation-date (#PCDATA)>
 
+<!-- ========================================================================
+Students have an ID attribute to easily and quickly differentiate between
+students, because IDs are unique to each student.
+
+The ID data type requires starting with a character and not a digit.
+I start each student ID with "i-" and then put the actual student ID.
+
+Ideally the DTD could reflect the requirement to start with "i-" and then
+the rest be the actual ID, but I do not know if there is a way to
+implement this.
+==========================================================================-->
 <!ATTLIST student id ID #REQUIRED>
 
+<!-- ========================================================================
+Contact info must contain an email and phone.
+==========================================================================-->
 <!ATTLIST contact-info
           email CDATA #REQUIRED
           phone CDATA #REQUIRED>
 
+<!-- ========================================================================
+Enrollment info also contains the status of what year students are in,
+and their status as to whether they are graduated or still enrolled as
+part time or full time.
+
+Having these as attributes limits the options to only valid statuses,
+instead of regular text.
+==========================================================================-->
 <!ATTLIST enrollment-info
           year-status (first-year|second-year|third-year|fourth-year) #REQUIRED
           graduation-status (full-time|part-time|graduated|withdrawn) #REQUIRED>

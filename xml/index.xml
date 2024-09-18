@@ -3,7 +3,7 @@
 <!DOCTYPE student-database SYSTEM "student.dtd">
 
 <student-database>
-  <student id="id-1234567">
+  <student id="i-1234567">
     <name>
       <first-name>Gordon</first-name>
       <middle-name>Matthew</middle-name>

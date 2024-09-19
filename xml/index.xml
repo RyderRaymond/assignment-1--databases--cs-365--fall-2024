@@ -3,7 +3,7 @@
 <!DOCTYPE student-database SYSTEM "student.dtd">
 
 <student-database>
-  <student id="i-1234567">
+  <student id="id-1234567">
     <name>
       <first-name>Gordon</first-name>
       <middle-name>Matthew</middle-name>
@@ -20,7 +20,7 @@
       <graduation-date>05-01-1973</graduation-date>
     </enrollment-info>
   </student>
-  <student id="i-4567890">
+  <student id="id-4567890">
     <name>
       <first-name>Kim</first-name>
       <middle-name />
@@ -37,7 +37,7 @@
       <graduation-date>05-01-1982</graduation-date>
     </enrollment-info>
   </student>
-  <student id="i-8302438">
+  <student id="id-8302438">
     <name>
       <first-name>Saul</first-name>
       <middle-name />
@@ -54,7 +54,7 @@
       <graduation-date>05-01-1987</graduation-date>
     </enrollment-info>
   </student>
-  <student id="i-2983928">
+  <student id="id-2983928">
     <name>
       <first-name>Emily</first-name>
       <middle-name />
@@ -71,7 +71,7 @@
       <graduation-date>05-01-2002</graduation-date>
     </enrollment-info>
   </student>
-  <student id="i-7645726">
+  <student id="id-7645726">
     <name>
       <first-name>Mike</first-name>
       <middle-name />

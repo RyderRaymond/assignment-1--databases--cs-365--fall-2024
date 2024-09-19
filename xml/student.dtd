@@ -52,11 +52,12 @@ Students have an ID attribute to easily and quickly differentiate between
 students, because IDs are unique to each student.
 
 The ID data type requires starting with a character and not a digit.
-I start each student ID with "i-" and then put the actual student ID.
+I start each student ID with "id-" and then put the actual student ID.
 
-Ideally the DTD could reflect the requirement to start with "i-" and then
+Ideally the DTD could reflect the requirement to start with "id-" and then
 the rest be the actual ID, but I do not know if there is a way to
-implement this.
+implement this. Also, the CSS should be set to remove the "id-", but I did not
+know how to do something like this in CSS, so this is why the "id-" is left in.
 ==========================================================================-->
 <!ATTLIST student id ID #REQUIRED>
 
